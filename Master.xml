@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ 
+<!----------------------
+					BIENVENIDO  A IbaiDigital
+					
+					
+										
+					LISTA DE CANALES PARA KODI
+						
+-->
+
+
+
+ 
+ 
+ 
+
+
+<item>
+<title>                     [COLOR skyblue]**[B] RECOPILACIÓN DE ENLACES[/COLOR][COLOR lightslategray][/COLOR][COLOR deepskyblue]IBAITXO[/B][/COLOR] </title>	
+<info> Me gusta que los planes salgan bien </info>			
+
+<link>$doregex[makelist]</link>
+
+</item>
+
+
+
+ 
+
+
+<item>
+<title>                [COLOR lightslategray]update: [COLOR lightblue][B]***[/B][/COLOR]  16 SEPTIEMBRE 2017[/COLOR]      </title>
+<link>$doregex[openDialog]</link>
+<regex>
+<name>openDialog</name>
+<expres><![CDATA[#$pyFunction
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    __addon__ = xbmcaddon.Addon()
+    __addonname__ = __addon__.getAddonInfo('name')     
+    line1 = " Adryanlist es GRATIS, pero funciona gracias a  tus donaciones, para mantener las listas y el addon funcionando, es por ello que  te pido tu apoyo realizando una pequeña donacion "VOLUNTARIA" mediante PAYPAL  ya sea al correo adrian.bu@gmail.com o  entrando directamente a la pagina http://paypal.me/adryanlist, Gracias a tus donaciones este proyecto seguira adelante"
+    xbmcgui.Dialog().ok(__addonname__, line1, line2, line3)
+    return 
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex><thumbnail>Ibai/master/thumbnail.png </thumbnail><fanart>Ibai/master/fanart.png </fanart>
+<info>Espacio gratuito de entretenimiento</info></item>
+
+<item>
+<title>[COLOR lime]•[/COLOR][COLOR deepskyblue]  Deportes[/COLOR] [COLOR lightslategray] [/COLOR]</title>
+<link>http://ignorame</link><thumbnail>https://www.directv.com.ar/ofertas/img/Bg-ProductosServicios.png</thumbnail><fanart>Ibai/master/fanart.png </fanart>
+<externallink>https://raw.githubusercontent.com/alfilodeloimposible/superibai/master/listamaestra.xml</externallink>
+</item>
+
+<item>
+<title>[COLOR lime]•[/COLOR][COLOR aquamarine]  [B]La Liga[/B][/COLOR] [COLOR lightslategray](acestreams) [/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<item><title>[COLOR lightgreen][makelist.param1] [COLOR silver] [makelist.param2]  [COLOR skyblue] [makelist.param4][/COLOR][/COLOR][/COLOR]  [COLOR deepskyblue] [makelist.param5][/COLOR] </title>
+<link>plugin://program.plexus/?url=$doregex[hash]&amp;mode=1&amp;name=Adryanlist+[makelist.param4]</link>
+			<regex>
+			<name>hash</name> 
+			<expres>this.loadPlayer\("(.*?)"</expres>
+			<page>http://arenavision2017.tk/$doregex[canal]</page>
+			<referer>http://arenavision2017.tk/</referer>
+			<setcookie>beget=begetok</setcookie>
+			</regex>
+			<regex>
+			<name>canal</name> 
+			<expres>$pyFunction:'[makelist.param5]'.replace('1','01').replace('2','02').replace('3','03').replace('4','04').replace('5','05').replace('6','06').replace('7','07').replace('8','08').replace('9','09')</expres>
+			<page></page>
+			</regex>
+			
+			<thumbnail>http://adryanlist.org/adryan/img/acestream.jpg</thumbnail>
+<fanart>Ibai/master/fanart.png </fanart>
+
+</item>	
+]]></listrepeat>
+<expres><![CDATA[230px">(.*?)<[\w\W\s]{0,50}px">(.*?)CEST[\w\W\s]{0,53}px">(.*?)<[\w\W\s]{0,53}SPANISH LA LIGA[\w\W\s]{0,50}px">(.*?)<[\w\W\s]{0,50}px">([0-9]+)]]></expres>
+<page>http://arenavision2017.tk/iguide</page>
+<Agent>Mozilla</Agent>
+<referer>http://arenavision2017.tk/iguide</referer>
+<setcookie>beget=begetok</setcookie>
+</regex><thumbnail>http://files.laliga.es/seccion_logos/laliga-h-1200x1200.png</thumbnail>
+	<fanart>Ibai/master/fanart.png </fanart>
+	
+</item>
+
+
+<item>
+<title>[COLOR lime]•[/COLOR][COLOR deepskyblue]  [B]Lista supermospi[/B] [/COLOR] [COLOR lightslategray]  [/COLOR]</title>
+<link>http://ignorame</link><thumbnail>>http://adryanlist.org/adryan/img/peliculas.png</thumbnail><fanart>Ibai/master/fanart.png </fanart>
+<externallink>https://raw.githubusercontent.com/alfilodeloimposible/superibai/master/listasupermospitv.xml</externallink>
+</item>
+
+
+
+
+<item>
+<title>[COLOR lime]•[/COLOR][COLOR deepskyblue]  [B]Peliculas[/B] [/COLOR] [COLOR lightslategray]  [/COLOR]</title>
+<link>http://ignorame</link><thumbnail>>http://adryanlist.org/adryan/img/peliculas.png</thumbnail><fanart>Ibai/master/fanart.png </fanart>
+<externallink>https://raw.githubusercontent.com/alfilodeloimposible/superibai/master/peliculas.xml</externallink>
+</item>
+
+
+<item>
+<title>[COLOR lime]•[/COLOR][COLOR deepskyblue]  [B]Series de TV[/B] [/COLOR] [COLOR lightslategray] [/COLOR]</title>
+<link>http://ignorame</link><thumbnail>http://4.bp.blogspot.com/-v0OLlbDruf4/UnbP1nJ3CLI/AAAAAAABICE/kxHC71MF8Us/s1600/0AFA4695B.png</thumbnail>
+	<fanart>Ibai/master/fanart.png </fanart>
+<externallink>https://raw.githubusercontent.com/alfilodeloimposible/superibai/master/seriesdetv.xml</externallink>
+</item>
+
+
+
+<item>
+<title>[COLOR lime]•[/COLOR][COLOR deepskyblue]  España[/COLOR] </title>
+<link>http://ignorame</link><thumbnail>http://www.mixeroshd.com/img/espa%C3%B1a.png</thumbnail><fanart>Ibai/master/fanart.png </fanart>
+<externallink>https://raw.githubusercontent.com/alfilodeloimposible/superibai/master/listamaestraEspa%C3%B1a.xml</externallink>
+</item>
+
+
+
+<item>
+<title>[COLOR lime]•[/COLOR][COLOR deepskyblue]  [B]Television [COLOR skyblue]24/7[/COLOR][/COLOR] [/B] [COLOR lightslategray] [/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param2]</title>
+<link>https://hls-ord-1a.vaughnsoft.net/ams/live/live_[makelist.param1]/chunklist.m3u8</link>
+
+
+<thumbnail>http://st2.depositphotos.com/3562409/8010/i/950/depositphotos_80106216-stock-photo-4k-ultra-hd-television.jpg</thumbnail>
+<fanart>Ibai/master/fanart.png </fanart>
+]]></listrepeat>
+<expres>a href="/(.*?)"[\w\W\s]{0,22}browseTxt">(.*?)<</expres>
+<page>https://vaughnlive.tv/browse/espanol&amp;a=mvn</page>
+<agent>Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5</agent>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+<fanart>Ibai/master/fanart.png </fanart>
+<thumbnail>http://adryanlist.org/adryan/img/247.png</thumbnail>
+</item>
+
+
+
+
+
+
+<item>
+		<title>[COLOR lime]•[/COLOR][COLOR skyblue]  [B]J.H.G. MASTER[/B][/COLOR]  [COLOR lightslategray] [/COLOR]</title>
+		<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/jhg.png</thumbnail> 
+		<externallink>https://raw.githubusercontent.com/alfilodeloimposible/superibai/master/jhgmasterindex.xml</externallink><fanart>Ibai/master/fanart.png </fanart>
+		</item>
+
+ <item>
+<title>DMCA: This Addon only contains links and embeds to TV channels from 3rd party sites Which are freely available on all Internet. We are not affiliated in any way with the broadcasted channels nor responsible for their content. All content is copyright of their respective owners.</title>
+<link>http://ignorame</link><thumbnail>http://adryanlist.org/adryan/img/dmca.png</thumbnail><fanart>Ibai/master/fanart.png </fanart>
+<externallink>http://adryanlist.org/adryan/tapout.xml</externallink>
+</item>
